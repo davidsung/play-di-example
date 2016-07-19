@@ -13,7 +13,7 @@ import scala.concurrent.Future
   * So we mock service here
   */
 class DeviceControllerSpec extends PlaySpec with Results with MockFactory {
-  "Example Page#index" should {
+  "DeviceController" should {
     "should be valid" in {
       val deviceService = stub[DeviceService]
       (deviceService.getDevice _).when(*).returns(Device(5))

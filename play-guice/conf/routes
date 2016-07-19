@@ -4,3 +4,5 @@
 
 # Home page
 GET        /device               com.harborx.api.device.DeviceController.get()
+GET        /example              com.harborx.api.system.SystemController.configExample()
+GET        /env                  com.harborx.api.system.SystemController.envExample()

@@ -19,6 +19,7 @@ class HxAppComponents(context: Context) extends BuiltInComponentsFromContext(con
 
 trait AppComponents
 extends BuiltInComponents
+with SystemModule
 with DeviceModule {
   lazy val router: Router = {
     // add the prefix string in local scope for the Routes constructor
