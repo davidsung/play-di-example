@@ -15,11 +15,13 @@ class HxAppComponents(context: Context) extends BuiltInComponentsFromContext(con
   LoggerConfigurator(context.environment.classLoader).foreach {
     _.configure(context.environment)
   }
+  appSingleton.init()
 }
 
 trait AppComponents
 extends BuiltInComponents
 with SystemModule
+with AppSingletonModule
 with DeviceModule {
   lazy val router: Router = {
     // add the prefix string in local scope for the Routes constructor
